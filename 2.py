@@ -1,1 +1,1 @@
-from classes.bfs import BfsTraverser
+from classes.gbfs import GBfsTraverser

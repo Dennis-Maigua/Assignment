@@ -1,6 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-from classes.bfs import BfsTraverser
+from classes.gbfs import GBfsTraverser
 
 G = nx.Graph()
 nodes = ["SC", "Siwaka", "Ph.1A", "Ph.1B", "Phase2",
@@ -41,8 +41,8 @@ node_pos = nx.get_node_attributes(G, 'pos')
 arc_weight = nx.get_edge_attributes(G, 'weight')
 
 # call BFS to return set of all possible routes to the goal
-route_bfs = BfsTraverser()
-routes = route_bfs.bfs(G, "SC", "ParkingLot")
+route_bfs = GBfsTraverser()
+routes = route_bfs.breadth_first_search(G, "SC", "ParkingLot")
 print(route_bfs.visited)
 route_list = route_bfs.visited
 
