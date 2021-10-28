@@ -32,8 +32,8 @@ G.nodes["STC"]['pos'] = (2, -2)
 G.nodes["Phase2"]['pos'] = (3, -1)
 G.nodes["J1"]['pos'] = (4, -1)
 G.nodes["Phase3"]['pos'] = (4, -2)
-G.nodes["ParkingLot"]['pos'] = (4, -3)
 G.nodes["Mada"]['pos'] = (5, -1)
+G.nodes["ParkingLot"]['pos'] = (4, -3)
 
 # store all positions in a variable
 node_pos = nx.get_node_attributes(G, 'pos')
