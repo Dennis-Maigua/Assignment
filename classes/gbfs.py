@@ -4,7 +4,7 @@ class GBfsTraverser:
         self.visited = []
         self.end_search = False
 
-    def breadth_first_search(self, graph, start_node, goal_node):
+    def bfs(self, graph, start_node, goal_node):
         queue = [start_node]
         # print(queue)
         # set of visited nodes

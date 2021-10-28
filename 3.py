@@ -42,7 +42,7 @@ arc_weight = nx.get_edge_attributes(G, 'weight')
 
 # call BFS to return set of all possible routes to the goal
 route_bfs = GBfsTraverser()
-routes = route_bfs.breadth_first_search(G, "SC", "ParkingLot")
+routes = route_bfs.bfs(G, "SC", "ParkingLot")
 print(route_bfs.visited)
 route_list = route_bfs.visited
 
