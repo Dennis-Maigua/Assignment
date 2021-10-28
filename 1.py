@@ -39,10 +39,12 @@ G.nodes["Mada"]['pos'] = (5, -1)
 node_pos = nx.get_node_attributes(G, 'pos')
 arc_weight = nx.get_edge_attributes(G, 'weight')
 
+# draw network
 nx.draw_networkx(G, node_pos, node_size=1000)
 nx.draw_networkx_edges(G, node_pos, width=1)
 nx.draw_networkx_edge_labels(G, node_pos, edge_labels=arc_weight)
 
+# display
 plt.axis('off')
 plt.show()
 
