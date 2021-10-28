@@ -60,4 +60,3 @@ nx.draw_networkx_edge_labels(G, node_pos, edge_labels=arc_weight)
 # display
 plt.axis('off')
 plt.show()
-
