@@ -23,7 +23,7 @@ class GBfsTraverser:
         while not pq.empty():
             u = pq.get()[1]
             # Displaying the path having lowest cost
-            print(u, end=" ")
+            # print(u, end=" ")
             if u == target:
                 break
 
@@ -31,5 +31,3 @@ class GBfsTraverser:
                 if not visited:
                     visited = True
                     pq.put((c, v))
-
-        print()
