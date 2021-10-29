@@ -3,7 +3,7 @@ from queue import PriorityQueue
 
 class UcsTraverser:
 
-    def ucs(self, problem):
+    def ucs(problem):
         frontier = PriorityQueue()
         fringe = []
         path = []
@@ -35,3 +35,5 @@ class UcsTraverser:
                             frontier.push((states[0], path + [states[1]]), cost)
                             dict[states[0]] = cost
                             visited.add(states[0])
+
+        print()
