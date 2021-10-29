@@ -1,3 +1,3 @@
-from classes.gbfs import GBfsTraverser
+from classes.bfs import GBfsTraverser
 
-# Check file in 'classes' folder/directory
+# Check gbfs.py in 'classes' folder/directory

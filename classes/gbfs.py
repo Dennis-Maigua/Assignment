@@ -1,34 +1,35 @@
+from queue import PriorityQueue
+
+
 class GBfsTraverser:
+
     # Constructor
     def __init__(self):
         self.visited = []
         self.end_search = False
 
-    def bfs(self, graph, start_node, goal_node):
-        queue = [start_node]
+    # Function For Implementing Best First Search
+    # Gives output path having lowest cost
+
+    def gbfs(self, graph, source, target):
+        queue = [source]
         # print(queue)
         # set of visited nodes
-        self.visited.append(start_node)
-        while queue and not self.end_search:
-            # Dequeue a vertex from
-            s = queue.pop(0)
+        self.visited.append(source)
+        visited = True
+        pq = PriorityQueue()
+        pq.put((0, source))
 
-            # Get all adjacent vertices of the
-            # dequeued vertex s. If a adjacent
-            # has not been visited, then mark it
-            # visited and enqueue it
-            for i in list(graph[s]):
-                if i not in self.visited:
-                    # print ("Command; Drive from ",s," to " ,i, " Estate/Junction", end = "\n")
-                    # print("Current Node is",i, " but the goal Node is ",goal_node)
-                    print("Command; Drive to ", i, " Parking Lot", end="\n")
-                    if i is goal_node:
-                        print("We have reached ", i, " the final destination")
-                        self.visited.append(i)
-                        self.end_search = True
-                        break
-                    else:
-                        # print("Here",self.end_search)
-                        queue.append(i)
-                        # visited[i] = True
-                        self.visited.append(i)
+        while not pq.empty():
+            u = pq.get()[1]
+            # Displaying the path having lowest cost
+            print(u, end=" ")
+            if u == target:
+                break
+
+            for v, c in queue:
+                if not visited:
+                    visited = True
+                    pq.put((c, v))
+
+        print()
