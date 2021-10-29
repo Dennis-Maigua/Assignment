@@ -13,21 +13,25 @@ class GBfsTraverser:
 
     def gbfs(self, graph, source, target):
         queue = [source]
-        # print(queue)
-        # set of visited nodes
-        self.visited.append(source)
-        visited = True
         pq = PriorityQueue()
         pq.put((0, source))
+        self.visited.append(source)
 
         while not pq.empty():
             u = pq.get()[1]
-            # Displaying the path having lowest cost
-            # print(u, end=" ")
-            if u == target:
-                break
+            # Dequeue a vertex from
+            s = queue.pop(0)
 
-            for v, c in queue:
-                if not visited:
-                    visited = True
-                    pq.put((c, v))
+            for i in list(graph[u]):
+                if i not in self.visited:
+                    print("Command; Drive to ", i, " Parking Lot", end="\n")
+                if i is target:
+                    print("We have reached ", i, " the final destination")
+                    self.visited.append(i)
+                    self.end_search = True
+                    break
+                else:
+                    # print("Here",self.end_search)
+                    queue.append(i)
+                    # visited[i] = True
+                    self.visited.append(i)
