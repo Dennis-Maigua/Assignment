@@ -1,7 +1,7 @@
 from queue import PriorityQueue
 
 
-class GBfsTraverser:
+class GbfsTraverser:
 
     # Constructor
     def __init__(self):

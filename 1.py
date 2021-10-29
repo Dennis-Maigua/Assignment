@@ -7,7 +7,7 @@ nodes = ["SC", "Siwaka", "Ph.1A", "Ph.1B", "Phase2",
 G.add_nodes_from(nodes)
 G.nodes()
 
-# Add Edges and their weights
+# add Edges and their weights
 G.add_edge("SC", "Siwaka", weight=450)
 G.add_edge("Siwaka", "Ph.1A", weight=10)
 G.add_edge("Siwaka", "Ph.1B", weight=230)
