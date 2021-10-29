@@ -35,3 +35,4 @@ class GBfsTraverser:
                     queue.append(i)
                     # visited[i] = True
                     self.visited.append(i)
+                    break
