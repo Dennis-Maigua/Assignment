@@ -19,10 +19,16 @@ class GBfsTraverser:
 
         while not pq.empty():
             u = pq.get()[1]
+
+            # Displaying the path having lowest cost
+            print(u, end=" ")
+            if u == target:
+                break
+
             # Dequeue a vertex from
             s = queue.pop(0)
 
-            for i in list(graph[u]):
+            for i in list(graph[s]):
                 if i not in self.visited:
                     print("Command; Drive to ", i, " Parking Lot", end="\n")
                 if i is target:
